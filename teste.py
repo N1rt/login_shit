@@ -27,7 +27,7 @@ elif(menu_anwser == menu[1]):
 	lista_edit = open("the path to the text file here",'w')
 	lista_edit.write(f'{user_list_to_string}\n{new_user}')
 elif(menu_anwser == menu[2]):
-	#deletando um novo usuario
+	#deletando um usuario
 	delete_user = str(input('digite "nome:senha" do seu usuario para apaga-lo:'))
 	lista_edit = open("the path to the text file here",'w')
 	lista_edit.write(f'{user_list_to_string.replace(delete_user,"")}')
