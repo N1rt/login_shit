@@ -6,7 +6,7 @@ lista = open('the path to the text file here','r')
 users_list = lista
 #transformando-a em string e lendo ela
 user_list_to_string = str(users_list.read())
-
+#verificando oque o usuario quer fazer
 if(menu_anwser == menu[0]):
 	#esperando o resultado do input do nome do usuario
 	user = input("digite seu nome:".capitalize())
@@ -22,10 +22,12 @@ if(menu_anwser == menu[0]):
 	else:
 		print('usuario inexistente!'.capitalize()) 
 elif(menu_anwser == menu[1]):
+	#adicionando um novo usuario
 	new_user = str(input('digite seu novo usuario assim:"usuario:senha"'.capitalize()))
 	lista_edit = open("the path to the text file here",'w')
 	lista_edit.write(f'{user_list_to_string}\n{new_user}')
 elif(menu_anwser == menu[2]):
+	#deletando um novo usuario
 	delete_user = str(input('digite "nome:senha" do seu usuario para apaga-lo:'))
 	lista_edit = open("the path to the text file here",'w')
 	lista_edit.write(f'{user_list_to_string.replace(delete_user,"")}')
