@@ -1,7 +1,7 @@
 menu = (1,2,3,4)
 menu_anwser = int(input('oque gostaria de fazer? \n [1] fazer login \n [2] adicionar usuario \n [3] remover usuario \n [4] sair \n:'.capitalize()))
 #abrindo a lista
-lista = open('C:/Users/hyand/Documents/python_projects/texto.txt','r')
+lista = open('the path to the text file here','r')
 #passando o atributo object pra a var user_list
 users_list = lista
 #transformando-a em string e lendo ela
@@ -23,11 +23,11 @@ if(menu_anwser == menu[0]):
 		print('usuario inexistente!'.capitalize()) 
 elif(menu_anwser == menu[1]):
 	new_user = str(input('digite seu novo usuario assim:"usuario:senha"'.capitalize()))
-	lista_edit = open("C:/Users/hyand/Documents/python_projects/texto.txt",'w')
+	lista_edit = open("the path to the text file here",'w')
 	lista_edit.write(f'{user_list_to_string}\n{new_user}')
 elif(menu_anwser == menu[2]):
 	delete_user = str(input('digite "nome:senha" do seu usuario para apaga-lo:'))
-	lista_edit = open("C:/Users/hyand/Documents/python_projects/texto.txt",'w')
+	lista_edit = open("the path to the text file here",'w')
 	lista_edit.write(f'{user_list_to_string.replace(delete_user,"")}')
 if(menu_anwser == menu[3]):
 	exit()
